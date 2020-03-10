@@ -1,0 +1,41 @@
+clc;
+clear;
+disp("Chirag Bolakani 07");
+// find the roots of quadratic equation ax^2+bx+c
+r=1;
+while (r==1)
+    a=input("enter value for a");
+    b=input("enter value for b");
+    c=input("enter value for c");
+    if(a==0) then 
+        if(b~=0) then
+            x=c/b;
+            disp(x,"answer");
+        else
+            disp(c,"solution");
+        end
+    else
+
+        d=b^2-4*a*c;
+        if(d>=0) then
+            r1(-b+sq+(d))/(2*a);
+            r1(-b+sq-(d))/(2*a);
+            disp(r2,"&" , r1,"roots");
+        else
+            r1=-b/(2*a);
+            r2=r1;
+            i1=sqrt(abs(d))/(2*a);
+            i2=-i1;
+            disp(r1+i1*sqrt(-1),'$',r2+i2*sqrt+(-1),"roots are");
+        end
+    end
+    r=input("continue?");
+    if(r==2) then
+        break;
+    else if(r~=1) then
+            disp("invalid")
+        end
+    end
+end
+
+
