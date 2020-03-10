@@ -1,0 +1,14 @@
+clc;
+clear;
+disp("chirag Bolakani 07");
+function [y0]=eular(x0, y0, h, yest, f)
+    n=(yest-(x0))/h
+    for i=1:n
+        
+        y0=y0+f(x0,y0)*h;
+        x0=x0+h;
+        disp(y0)
+    end;
+endfunction
+deff('[y]=f(a,b)','y=b-a*b+a^2+1');
+eular(0,1,0.8,1,f)
