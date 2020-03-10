@@ -1,0 +1,22 @@
+//2b. Find the root of x4-3x3+3x 2-x-9 using false position method up-to 4 decimal places.
+clc;
+clear;
+disp("Chirag Bolakani 07")
+deff('y=f(x)','y=x^4-3*x^3+5*x^2-x-9');
+a = 1;
+b = 2;
+d = 0.0001;
+printf("a \t\t f(a) \t\t b\t\t f(b)\t\t n\t\t f(n)\n");
+for i = 1:500
+    n=(a*f(b)-b*f(a))/(f(b)-f(a));
+    printf("%f \t %f \t %f\t %f \t\t %f\n",a,f(a),b,f(b),n,f(n));
+    if(f(n)*f(a)>0) then
+        a=n;
+    else
+        b=n;
+    end
+    if abs(f(n))<d then
+        break;
+    end
+end
+printf("\nRoot of the equation is %f after %i iteration ",n,i);
