@@ -1,0 +1,30 @@
+//7b dy/dx=y-x+1 y(0)=2,h=0.1 find y(0.5) using 2nd and 4th order
+clc;
+clear;
+disp("chirag bolakani 07");
+disp("y(0.5) using 2nd order");
+deff('y=f(x,y)','y=y-x+1')
+y0=2,x0=0,h=0.1,xn=0.5;
+n=(xn-x0)/h
+for i=1:n
+    k1=h*f(x0,y0)
+    k2=h*f(x0+h/2,y0+k1)
+    y1=y0+(1/2)*(k1+k2)
+    x0=x0+h
+    disp([x0 y1])
+    y0=y1
+end
+deff('y=f(x,y)','y=y-x+1')
+y0=2,x0=0,h=0.1,xn=0.5;
+n=(xn-x0)/h
+disp("y(0.5) using 4th order");
+for i=1:n
+    k1=h*f(x0,y0)
+    k2=h*f(x0+h/2,y0+k1/2)
+    k3=h*f(x0+h/2,y0+k2/2)
+    k4=h*f(x0+h,y0+k3)
+    y1=y0+1/6*(k1+2*k2+2*k3+k4)
+    x0=x0+h
+    disp([x0 y1])
+    y0=y1
+end
