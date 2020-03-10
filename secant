@@ -1,0 +1,26 @@
+//2d  Find the root of 4.33-xex-1 using Secant method upto 4 decimal places.
+clc;
+clear;
+disp("Chirag Bolakani 07");
+deff('y=f(x)','y=x^4.33-x*exp(x)-1');
+x0=1;
+x1=2;
+d=0.1;
+c=0;
+n=1;
+eqn='y=x^4.33-x*exp(x)-1';
+printf('x0 \t\t f(x0) \t\t x1 \t\t f(x1) \t x2 \t\t f(x2)\n');
+while n==1
+    x2=x1-((x1-x0)/(f(x1)-f(x0)))*f(x1);
+    printf('%f \t %f \t %f \t %f \t %f \t %f\n',x0,f(x0),x1,f(x1),x2,f(x2));
+    if abs(f(x2))<d then
+        break;
+    end
+    if(f(x0)*f(x2)>0)
+        x0=x2;
+    else
+        x1=x2;
+    end
+    c=c+1;
+end
+printf('\nRoot of equation %s using Secant method after %i iteration is %f',eqn,c,x2);
