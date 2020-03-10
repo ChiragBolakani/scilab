@@ -1,0 +1,48 @@
+clc;
+clear;
+disp("Chirag Bolakani 07");
+x=[1.0 1.2 1.4 1.6 1.8 2.0 2.2];
+y=[2.7183 3.3201 4.0552 4.9530 6.0496 7.3891 9.0250];
+n=7;
+for i=1:(n-1)
+    d1(i)=y(i+1)-y(i);
+    printf('First delta of y(%i) is %f\n',i-1,d1(i));
+end
+printf('\n');
+//Second delta
+
+for j=1:(n-2)
+    d2(j)=d1(j+1)-d1(j);
+    printf('second delta of y(%i) is %f\n',j-1,d2(j));
+end
+printf('\n');
+//third delta
+for k=1:(n-3)
+    d3(k)=d2(k+1)-d2(k);
+    printf('Third delta of y(%i) is %f\n',k-1,d3(k));
+end
+printf('\n');
+//forth
+for l=1:(n-4)
+    d4(l)=d3(l+1)-d3(l);
+    printf('Fourth delta of y(%i) is %f\n',l-1,d4(l));
+end
+printf('\n');
+//fifth
+for m=1:(n-5)
+    d5(m)=d4(m+1)-d4(m);
+    printf('Fifth delta of y(%i) is %f\n',m-1,d5(m));
+end
+printf('\n');
+//sisth
+for o=1:(n-6)
+    d6(o)=d5(o+1)-d5(o);
+    printf('Sixth delta of y(%i) is %f\n',o-1,d6(o));
+end
+z=1.3;
+h=x(2)-x(1);
+u=(z-x(1))/h;
+f1=((d1(2)-d2(2)/2+d3(2)/3-d4(2)/4+d5(2)/5)/h);
+f2=(d2(3)-d3(2)+(11+d4(2))/12-(5*d5(2))/6/h^2);
+printf('\nThe first derivative of function at 1.2 is %f\n',f1);
+printf('\nThe second derivative of function at 1.2 is %f\n',f2);
