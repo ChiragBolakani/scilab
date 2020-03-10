@@ -1,0 +1,24 @@
+//FInd the roots of the equation using gauss siedel method 
+//2x+y+z=5
+//3x+6y+2z=15
+//2x+y+4z=18
+clc;
+clear;
+printf("Chirag Bolakani 07\n");
+a=[];
+b=[];
+c=[];
+printf('x=(1/2)*(5-y-z)\n');
+printf('y=(1/6)*(15-3x-2z)\n');
+printf('z=(1/4)*(8-2x-y)\n');
+n=3;
+printf("\n");
+a(1)=0;
+b(1)=0;
+c(1)=0;
+for i=2:n+1
+    a(i)=(1/2)*(5-(b(i-1))-(c(i-1)));
+    b(i)=(1/6)*(15-(2*c(i-1))-(3*a(i)));
+    c(i)=(1/4)*(8-(b(i))-(2*a(i)));
+    printf('values for x(%i),y(%i)&z(%i)are%f,%f,%f\n',i-1,i-1,i-1,a(i),b(i),c(i))
+end
