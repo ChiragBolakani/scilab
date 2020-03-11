@@ -1,0 +1,59 @@
+clc;
+clear;
+disp("Chirag Bolakani 07");
+x=[15 20 25 30 35 40 45];
+y=[0.9659258 0.9396926 0.9063077 0.8660254 0.8191520 0.7660444 0.7071067];
+h=x(2)-x(1);
+n=7;
+//first delta
+for i=1:(n-1)
+    d1(i)=y(i+1)-y(i);
+    printf('First delta of y(%i) is %f\n',i-1,d1(i));
+end
+//Second delta
+for j=1:(n-2)
+    d2(j)=d1(j+1)-d1(j);
+    printf('second delta of y(%i) is %f\n',j-1,d2(j));
+end
+//third delta
+for k=1:(n-3)
+    d3(k)=d2(k+1)-d2(k);
+    printf('Third delta of y(%i) is %f\n',k-1,d3(k));
+end
+printf('\n');
+//forth delta
+for l=1:(n-4)
+    d4(l)=d3(l+1)-d3(l);
+    printf('Fourth delta of y(%i) is %f\n',l-1,d4(l));
+end
+//fifth delta
+for m=1:(n-5)
+    d5(m)=d4(m+1)-d4(m);
+    printf('Fifth delta of y(%i) is %f\n',m-1,d5(m));
+end
+//sixth delta
+for o=1:(n-6)
+    d6(o)=d5(o+1)-d5(o);
+    printf('Sixth delta of y(%i) is %f\n',o-1,d6(o));
+end
+d=[d1(i) d2(j) d3(k) d4(l) d5(m) d6(o)];
+term=[];
+sot=0;
+z=42;
+c=(z-x(n))/h;
+printf('\nh is %f \nc is %f\n',h,c);
+printf('\n');
+for i=1:n
+    if (i==1) then
+        term(i)=y(n);
+    else
+        newc=1;
+        for j=1:(i-1)
+            newc=newc*(c+(j-1));
+        end 
+        term(i)=(newc*d(i-1))/factorial(i-1);
+    end
+    sot=sot+term(i);
+    printf('Term %i of N.B.D interpolation is %f\n)',i,term(i)); 
+end
+printf('\nValue of function at %f is %f',z,sot);
