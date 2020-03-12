@@ -1,0 +1,37 @@
+#include<iostream.h>
+#include<conio.h>
+class binary
+{
+public:
+int a,b;
+void read()
+{
+cout<<"enter two values\n";
+cin>>a>>b;
+}
+void display()
+{
+cout<<a<<b;
+}
+friend binary operator+(binary b1,binary b2)
+};
+binary operator+(binary b1,binary b2)
+{
+binary t;
+t.a=b1.a+b2.a;
+t.b=b1.b+b2.b;
+return t;
+}
+void main()
+{
+clrscr();
+cout<<"chirag bolakani 07";
+binary f1;
+f1.read();
+binary f2;
+f2.read();
+binary f3;
+f3=f1+f2;
+f3.display();
+getch();
+}
