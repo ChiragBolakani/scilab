@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+class base
+{
+protected:
+int a,b;
+public:
+virtual void read()
+{
+cin>>a>>b;
+}
+virtual void display()
+{
+cout<<a<<b;
+}
+};
+class sub:public base
+{
+protected:
+int c,d;
+public:
+virtual void read()
+{
+cin>>c>>d;
+}
+virtual void diplay()
+{
+cout<<c<<d;
+}
+};
+void main()
+{
+clrscr();
+cout<<"chirag bolakani 07";
+base *ptr;
+base b;
+sub a;
+ptr=&b;
+ptr->read();
+ptr->display();
+ptr=&a;
+ptr->read();
+ptr->display();
+getch();
+}
