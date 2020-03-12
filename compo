@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<iostream.h>
+#include<conio.h>
+class colony
+{
+char add[50];
+public:
+void getdata()
+{
+gets(add);
+}
+void show()
+{
+cout<<add;
+}
+};
+class roomdetail:public colony
+{
+int rono,bno;
+public:
+colony c1;
+void set()
+{
+cin>>rono;
+cin>>bno;
+c1.show();
+}
+};
+void main()
+{
+clrscr();
+cout<<"chirag bolakani 07\n";
+roomdetail r;
+r.set();
+getch();
+}
