@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Table</title>
+</head>
+<body>Chirag Bolakani 07<br>
+<table border="1" style="background-color: #9de7ab">
+<tr><th align="center" colspan="4">FybscIT</th></tr>
+<tr><td align="center" colspan="2">Main</td>
+<td align="center">Project</td>
+<tr><td align="center">DCN</td>
+<td align="center" rowspan="2">Linux</td>
+<td align="center" rowspan="2" colspan="2">Web</td></tr>
+<tr><td align="center">DC</td></tr>
+<tr><td align="center" rowspan="2">Java</td>
+<td align="center">AJ</td>
+<td align="center" rowspan="2" colspan="2">Designing</td></tr>
+<tr><td align="center">CJ</td></tr>
+</table></body>
+</html>
