@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form name="myform" method="post" onsubmit="validate()">
+		<input type="text" name="login">
+		<input type="password" name="pass">
+		<input type="submit" name="" >
+	</form>
+	<script type="text/javascript">
+		function validate(){
+		var name=document.myform.login.value;
+		var pass=document.myform.pass.value;
+
+		if (name==null || name==""){
+			alert("cannot be blank");
+			return false;
+		
+		}
+		else if(pass.length<6){
+			alert("pass cannot be less than 6 characters");
+			return false;
+			
+		}
+	}
+	</script>
+
+</body>
+</html>
