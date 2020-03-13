@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="number"  id="no" >
+		<input type="submit" value="submit" onclick="myfunc()">
+	</form>
+	<script type="text/javascript">
+		function myfunc(){
+			var n;
+			n = document.getElementById("no").value;
+			var r,sum=0;
+			while(n!=0){
+			r=n%10;
+			sum = sum + r;
+			n=Math.floor(n/10);
+		}
+		alert("sum is" + sum);
+		}
+		// alert("sum is" + sum);
+	</script>
+
+
+</body>
+</html>
