@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>table</title>
+</head>
+<body>
+<h3>Chirag Bolakani 07</h3>
+<table border=2 cellspacing=5 cellpading=5 style="height: 255px; width: 180px">
+<tr>
+<td colspan=4 bgcolor="red"> 1</td>
+<td rowspan=4 bgcolor="#d0cdc3">10</td>
+</tr>
+<tr>
+<td colspan=2 bgcolor="#eaa9cb">2</td>
+<td colspan=2 bgcolor="#eaeaa9">3</td>
+</tr>
+<tr>
+<td bgcolor="pink">4</td>
+<td bgcolor="#9de2e7">5</td>
+<td bgcolor="#9ba5e9">6</td>
+<td bgcolor="white">7</td>
+</tr>
+<tr>
+<td colspan=4 bgcolor="yellow">8</td>
+</tr>
+<tr>
+<td colspan=5 bgcolor="#9de7ab">9</td>
+</tr>
+</table>
+</body>
+</html>
