@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>chirag 07</title>
+</head>
+<body>
+Chirag bolakani 07<br>
+HTML 5 stands for hyper text markup language.<br>
+used for creating static web pages.<br>
+<hr size=70pix noshade>
+<h1>some header text</h1>
+<h6>header 6</h6>
+<blockquote>links are one of the most imp components of a web page.It allows the user to navigate
+internally within a webpage.HTML 5 formatting text using tags,using list and background,creating
+Hyper link,Anchors,Style sheets,CSS formating</blockquote>
+<div align=center>Div tag used to align text to the center</div>
+</body>
+</html>
