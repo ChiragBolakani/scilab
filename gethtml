@@ -1,0 +1,25 @@
+<head><h2>Chirag Bolakani 07</h2></head>
+<form name=f3 method="GET" action=chirag7.php>
+Enter No 1 <input type=text name=t1>
+Enter No 2 <input type=text name=t2>
+Enter No 3 <input type=text name=t3>
+<input type=submit value=check>
+</form>
+PHP:
+<?php
+$a=$_GET["t1"];
+$b=$_GET["t2"];
+$c=$_GET["t3"];
+if($a>$b && $b>$c)
+{
+echo$a;
+}
+else if($b>$a && $b>$c)
+{
+echo $b;
+}
+else
+{
+echo $c;
+}
+?>
