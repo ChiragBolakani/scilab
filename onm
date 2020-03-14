@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+		<p id="demo" onmouseout="mouseup()" onmouseover="mousedown()">fsklfsfks</p>
+
+<script type="text/javascript">
+function mouseup(){
+	document.getElementById("demo").innerHTML="hogaya change";
+	document.getElementById("demo").style.color="red";
+}
+function mousedown(){
+	document.getElementById("demo").innerHTML="hogaya change dusri baaar";
+	document.getElementById("demo").style.color="green";
+}
+
+
+</script>
+
+</body>
+</html>
