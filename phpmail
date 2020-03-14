@@ -1,0 +1,9 @@
+<?php
+$to="name@example.com";
+$subject="test mail";
+$message="Hello!This is a simple message";
+$from="sendername@example.com";
+$headers="from:$from";
+mail($to,$subject,$message,$headers);
+echo"Mail Sent";
+?>
