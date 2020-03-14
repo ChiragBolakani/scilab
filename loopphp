@@ -1,0 +1,25 @@
+<?php
+echo "Chirag Bolakani 07<br>";
+function abc()
+{
+$c=1;
+for ($i=1;$i<=4;$i++)
+{
+for ($j=1;$j<=$i;$j++)
+{
+echo $c%2;
+$c=$c+1;
+}
+if($i%2==0)
+{
+$c=1;
+}
+else
+{
+$c=0;
+}
+echo "<br>";
+}
+}
+abc();
+?>
